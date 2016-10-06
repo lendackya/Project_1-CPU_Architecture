@@ -24,7 +24,7 @@ typedef __int32_t regfile32x32[32];
 #ifndef P1CPU_INSTRUCTIONS
 #define P1CPU_INSTRUCTIONS
 
-typedef __int32_t instruction;
+typedef __uint32_t instruction; 
 
 typedef struct R_type_instruction {
 	char opcode:8;
@@ -41,5 +41,11 @@ typedef struct I_type_instruction {
 	reg32_addr rt_addr:8;
 	__uint16_t imm:16;
 } I_type_instruction;
+
+
+typedef struct J_type_instruction {
+
+
+} J_type_instruction;
 
 #endif
