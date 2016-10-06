@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) {
 	
 	// Stage 1: Instruction Fetch 1
 		// Get the instruction from the instruction memory
+		// Increment PC by 4
 		
 		// store instruction in IF1_IF2_buffer
 	
