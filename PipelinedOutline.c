@@ -1,9 +1,17 @@
 #include <stdio.h>
-#include "BUFFERS.h"
+#include <stdlib.h>
+#include <stdbool.h>
+#include "pipelinestuff.h"
 
 int main(int argc, char *argv[]) {
 	
+	// init the simulation
+	simulation_init(argc, argv);
+	
+	simulation_uninit();
+	
 	// Buffers
+	/*
 	IF1_IF2 IF1_IF2_buffer;
 	IF2_ID IF2_ID_buffer; 
 	ID_EX1 ID_EX1_buffer; 
@@ -11,6 +19,7 @@ int main(int argc, char *argv[]) {
 	EX2_MEM1 EX2_MEM1_buffer; 
 	MEM1_MEM2 MEM1_MEM2_buffer; 
 	MEM2_WB MEM_WB_buffer; 
+	*/
 	
 	
 	// Stage 1: Instruction Fetch 1

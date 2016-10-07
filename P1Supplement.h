@@ -13,7 +13,7 @@
 //	Types
 typedef __uint8_t reg_addr;					//	register address (only 5b used)
 typedef __int32_t register32_t;				//	register memory (32b)
-typedef register32_t regfile32x32_t[32];		//	register file, 32 registers
+typedef register32_t regfile32x32_t[32];	//	register file, 32 registers
 typedef __uint32_t instruction_t;			//	instruction of unspecified type
 
 typedef struct Rinstr_t {
@@ -60,6 +60,10 @@ void print_Jinstrxn(Jinstr_t instruxn) {
 	printf("0x[%0.1X|", instruxn.opcode);
 	printf("%0.4X]", instruxn.immediate);
 	printf("\n");
+}
+
+void simulation_init() {
+	
 }
 
 #endif
