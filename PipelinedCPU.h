@@ -8,6 +8,7 @@
 #define PIPELINEDCPU
 
 #define TRACE_BUFFERSIZE 1024*1024
+#define STEPLIMIT 128
 
 //	Types & Structures
 enum instruction_t {
@@ -22,14 +23,15 @@ enum instruction_t {
 	ti_JRTYPE
 };
 
-char* typestrings[] = {"NOP", "RTYPE", "ITYPE", "LOAD", "STORE", "BRANCH", "JTYPE", "SPECIAL", "JRTYPE"};
+//	reference instruction type strings, with whitespace to force R-alignment on printout
+char* typestrings[] = {"   NOP", " RTYPE", " ITYPE", "  LOAD", " STORE", "BRANCH", " JTYPE", "SPECIAL", "JRTYPE"};
 
 typedef struct trace_item_t {
 	unsigned char type;			// see above
-	unsigned char rs;			// 1st operand
-	unsigned char rt;			// 2nd operand
-	unsigned char rd;			// dest. operand
-	unsigned int pc;			// program counter
+	unsigned char rs;				// 1st operand
+	unsigned char rt;				// 2nd operand
+	unsigned char rd;				// dest. operand
+	unsigned int pc;				// program counter
 	unsigned int addr;			// mem. address
 } trace_item_t;
 
