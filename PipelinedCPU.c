@@ -132,6 +132,7 @@ int main(int argc, char *argv[]) {
 		for(int i=7; i>=0; i--) {
 			pipeline[i] = pipeline[i-1];
 		}
+		
 		//	need to intervene for hazards, forwarding, branch prediction, &c.
 	
 		size = trace_get_item(&tr_entry);
