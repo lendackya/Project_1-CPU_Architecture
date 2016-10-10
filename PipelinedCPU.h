@@ -44,6 +44,16 @@ int is_big_endian() {
 	return bint.c[0] == 1;
 }
 
+void insert_no_op(int stage, trace_item_t pipeline[]){
+	
+	//pipeline[stage].type = "NOP";
+	pipeline[stage].rs = 0x00;
+	pipeline[stage].rt = 0x00;
+	pipeline[stage].rd = 0x00;
+	pipeline[stage].pc = 0x00;
+	pipeline[stage].addr = 0x00;
+}
+
 uint32_t my_ntohl(uint32_t x) {
 	u_int8_t *s = (u_int8_t *)&x;
 	return (uint32_t)(s[3] << 24 | s[2] << 16 | s[1] << 8 | s[0]);
