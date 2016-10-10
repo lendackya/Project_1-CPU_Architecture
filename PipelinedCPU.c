@@ -114,72 +114,6 @@ void print_pipeline() {
 	printf("—————————————————————————————————————————————————————————————————————————––\n");
 }
 
-void branch_pred(int prediction_method){
-	
-	// Check IF1 for to see if we have a branch instruction
-	char* condition_str = typestrings[pipeline[0].type];
-	
-	// Check if we have to branch
-	bool branch_b = true;
-	
-	// Not Taken
-	if (prediction_method == 0){
-				
-		if (strcmp(condition_str, "BRANCH") == 0 && branch_b == true){
-			
-			printf("Branch! \n");
-			// stall previous stages by insertin NOPs
-			for (int i = 0; i < 4; i++){
-				
-				insert_no_op(i, pipeline);
-			}
-			print_pipeline();
-		}
-	}
-	// 1 bit Branch Predictor
-	else if (prediction_method == 1){
-				
-		int decimal; 
-				
-		if (strcmp(condition_str, "BRANCH") == 0 && branch_b == true){
-			
-			// get bits 9-4 of instruction
-		
-			// convert bits to int, 0-64
-			
-			
-			// Check the hash map 
-			
-			// prediction: true
-			if (ht.wasTaken[decimal] == true){
-				
-				
-			}
-			// prediction: false 
-			else if (ht.wasTaken[decimal] == false){
-				
-				
-			}
-			// nothing is in that slot yet
-			else{
-				
-				// add to the hash map	
-				printf("Adding to the hash map \n"); 
-				
-			}
-		}
-
-		
-		
-	}
-	// 2 Bit Branch Predictor
-	else if (prediction_method == 2){
-		
-		
-	}
-	
-}
-
 
 //	Main function
 int main(int argc, char *argv[]) {
@@ -216,9 +150,7 @@ int main(int argc, char *argv[]) {
 			step++;
 		}
 		//	for diagnostics for now
-		// print_pipeline();
-		
-		 branch_pred(0); 
+		print_pipeline();
 		//	limit test runs for now
 		if(step >= STEPLIMIT) break;
 	}//end-while
