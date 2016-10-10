@@ -58,18 +58,26 @@ void avoid_hazards(){
 	if (STRUCTURAL_HAZARD_FLG == true){
 		
 		
-	} else if (DATA_HAZARD_ONE == true){
+	} 
+	
+	if (DATA_HAZARD_FLG_ONE == true){
 		
 		
 		
-	} else if(DATA_HAZARD_TWO == true){
+	}  
+	
+	if(DATA_HAZARD_FLG_TWO == true){
 		
 		
 		
-	} else if (DATA_HAZARD_THREE == false){
+	} 
+	
+	if (DATA_HAZARD_FLG_THREE == false){
 		
 		
-	} else if(CONTROL_HAZARD == true){
+	}
+	 
+ 	if(CONTROL_HAZARD_FLG == true){
 		
 		
 	}
