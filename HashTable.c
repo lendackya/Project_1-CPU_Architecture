@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
 	ht_add(1, "4847844", 0, &ht);  
 	
 	//ht_print_full_table(&ht);
-	//ht_print_taken_pos(&ht); 
+	ht_print_tracked_pos(&ht); 
 	
-	printf("%d \n", ht_contains(0, &ht)); 
+	//printf("%d \n", ht_contains(0, &ht)); 
 }

@@ -4,13 +4,24 @@
 #ifndef BRANCH_PREDICTOR
 #define BRANCH_PREDICTOR
 
-void branch_pred(int prediction_method, trace_item_t* pipline[]){
+// Checks the IF1 stage, and gets the type of instruction 
+char* get_instruction_type(trace_item_t* pipeline[]){
 	
 	// Check IF1 for to see if we have a branch instruction
-	char* condition_str = typestrings[pipeline[0].type];
+	return = typestrings[pipeline[0].type];
+}
+
+bool evaluate_branch_cond(trace_item_t* pipeline[]){
+	
+	return true; 
+}
+
+void branch_pred(int prediction_method, trace_item_t* pipline[]){
+	
 	
 	// Check if we have to branch
-	bool branch_b = true;
+	char* instn_type = get_instruction_type(pipeline); 
+	bool branch_b = evalulate_branch_cond(pipeline);
 	
 	// Predict 'Not Taken'
 	if (prediction_method == 0){
@@ -41,14 +52,30 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 			// prediction: true
 			if (ht.wasTaken[decimal] == true){
 				
+				// get the target address and set PC to it
+				// flush previous instructions
+				
+				// Taken:
+					// Do nothing, we're already set up to handle this.
+				
+				// Not Taken:
+					// revert back to old PC
+					// DO NOT flush instructions
 				
 			}
 			// prediction: false 
 			else if (ht.wasTaken[decimal] == false){
 				
+				// continue normall
+				
+				
+				// taken: jump to target address and flush previous instructions
+				
+				// Not Taken: 
+					// Do nothing, we're already set up to handle this. 
 				
 			}
-			// nothing is in that slot yet
+			// nothing is in that slot yet, i.e, hash_table[decimal].address == NULL && hash_table[decimal].was_taken == -1 
 			else{
 								
 			}
