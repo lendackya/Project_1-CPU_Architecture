@@ -28,7 +28,7 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 				
 		if (strcmp(condition_str, "BRANCH") == 0 && branch_b == true){
 		
-			// stall previous stages by insertin NOPs
+			// stall previous stages by inserting NOPs
 			for (int i = 0; i < 4; i++){
 				
 				insert_no_op(i, pipeline);
@@ -45,15 +45,18 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 			
 			// get bits 9-4 of instruction
 		
-			// convert bits to int, 0-64
+			// convert bits to int, 0-63
 			
-			// Check the hash map 
-			
-			// prediction: true
+			// Check the hash map 			
+			// Prediction: Taken (1)
 			if (ht.wasTaken[decimal] == true){
 				
 				// get the target address and set PC to it
-				// flush previous instructions
+				// flush previous instructions by inserting NOPs
+				for (int i = 0; i < 4; i++){
+					
+					insert_no_op(i, pipeline);
+				}
 				
 				// Taken:
 					// Do nothing, we're already set up to handle this.
@@ -63,14 +66,16 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 					// DO NOT flush instructions
 				
 			}
-			// prediction: false 
+			// Prediction: Not Taken (0)
 			else if (ht.wasTaken[decimal] == false){
-				
-				// continue normall
-				
-				
-				// taken: jump to target address and flush previous instructions
-				
+						
+				// Taken:
+					// Jump to target address and flush previous instructions (4 instructions)
+					for (int i = 0; i < 4; i++){
+						
+						insert_no_op(i, pipeline);
+					}
+					
 				// Not Taken: 
 					// Do nothing, we're already set up to handle this. 
 				
