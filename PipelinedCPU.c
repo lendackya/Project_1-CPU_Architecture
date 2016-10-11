@@ -9,8 +9,8 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <string.h>
-#include "HashTable.h"
 #include "PipelinedCPU.h"
+#include "HashTable.h"
 
 
 //	Global Variables
@@ -89,7 +89,7 @@ int trace_get_item(trace_item_t **item) {
 
 //	Printout/Debug functions
 void print_trace_item(trace_item_t* ti) {
-	printf("%s (pc: 0x%0.8X) rs: %0.3d, rt: %0.3d, rd: %0.3d, addr: 0x%0.8X\n", 
+	printf("%6s (pc: 0x%0.8X) rs: %0.3d, rt: %0.3d, rd: %0.3d, addr: 0x%0.8X\n", 
 		typestrings[ti->type], ti->pc, ti->rs, ti->rt, ti->rd, ti->addr);
 }
 
@@ -157,6 +157,8 @@ int main(int argc, char *argv[]) {
 	}//end-while
 	
 	//	now drain the pipeline and track it
+	
+
 	
 	
 	

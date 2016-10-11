@@ -24,7 +24,7 @@ enum instruction_t {
 };
 
 //	reference instruction type strings, with whitespace to force R-alignment on printout
-char* typestrings[] = {"   NOP", " RTYPE", " ITYPE", "  LOAD", " STORE", "BRANCH", " JTYPE", "SPECIAL", "JRTYPE"};
+char* typestrings[] = {"NOP", "RTYPE", "ITYPE", "LOAD", "STORE", "BRANCH", "JTYPE", "SPECIAL", "JRTYPE"};
 
 typedef struct trace_item_t {
 	unsigned char type;			// see above
@@ -46,7 +46,7 @@ int is_big_endian() {
 
 void insert_no_op(int stage, trace_item_t pipeline[]){
 	
-	pipeline[stage].type = "NOP";
+	pipeline[stage].type = ti_NOP;
 	pipeline[stage].rs = 0x00;
 	pipeline[stage].rt = 0x00;
 	pipeline[stage].rd = 0x00;
