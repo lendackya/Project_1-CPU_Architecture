@@ -19,6 +19,22 @@ void init_hash_table(hash_table* ht){
 	}
 }
 
+int is_big_endian() {
+	union {
+		uint32_t i;
+		char c[4];
+	} bint = { 0x01020304 };
+	return bint.c[0] == 1;
+}
+
+__uint32_t getBits9to4(__uint32_t data) {
+	if(is_big_endian()) {
+		return ((data & 0x000003F0) >> 4);
+	} else {
+		return ((data & 0x0FC00000) << 4);
+	}
+}
+
 // Adds the address andif it was taken (1) or not taken (0)
 void ht_add(int key, char* address, bool was_taken, hash_table* ht){
 	
