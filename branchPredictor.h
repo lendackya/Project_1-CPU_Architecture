@@ -15,10 +15,13 @@ char* get_instruction_type(trace_item_t* pipeline[]){
 
 // Evaluates the Branch Condition and returns true if the condition is true, 
 // and false if the condition is false.
-bool evaluate_branch_cond(trace_item_t* pipeline[]){
+bool was_branch_taken(trace_item_t* pipeline[]){
 	
-	return true; 
+	// We did take a branch..
+	if (pipeline[4].pc != (pipeline[3].pc + 4)){ return true; }
+	else{ return false; }
 }
+
 
 // Predicts the Branch Instruction and takes the correct action
 void branch_pred(int prediction_method, trace_item_t* pipline[]){
@@ -31,39 +34,35 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 	// Predict 'Not Taken'
 	if (prediction_method == 0){
 				
-		if (strcmp(condition_str, "BRANCH") == 0 && branch_b == true){
+		if ( (strcmp(condition_str, "BRANCH") == 0) && (was_branch_taken(pipeline) == true) ){
 		
 			// stall previous stages by inserting NOPs
-			for (int i = 0; i < 4; i++){
-				
-				insert_no_op(i, pipeline);
-			}
-			//print_pipeline();
+		
+//			for (int i = 0; i < 4; i++){
+//				
+//				insert_no_op(i, pipeline);
+//			}
+//			//print_pipeline();
 		}
 	}
 	// 1 bit Branch Predictor
 	else if (prediction_method == 1){
 				
-		int decimal; 
-				
-		if (strcmp(condition_str, "BRANCH") == 0 && branch_b == true){
+		//if ( (strcmp(condition_str, "BRANCH") == 0) && (was_branch_taken(pipeline) == true) ){
 			
 			// get bits 9-4 of instruction
+			u_int32_t bits = getBits9to4(pipeline[4].pc)
 		
 			// convert bits to int, 0-63
-					
+			bool pred_valid; 
 			// Prediction: Taken (1)
-			if (ht.was_taken[decimal] == true){
+			if (ht.was_taken[(int) bits] == 1){
 				
 				// Taken ---> Jump to the Target Address and start grabbing instructions from that address.
 				
+				pred_valid = pipeline[4].pc != (pipeline[3].pc + 4); 
 				// get the target address and set PC to it
-				// flush previous instructions by inserting NOPs
-				for (int i = 0; i < 4; i++){
-					
-					insert_no_op(i, pipeline); 
-				}
-				
+
 				// If prediction was correct --> Do nothing. We're already set up to handle this.
 					
 				// If we find our prediction was wrong..
@@ -74,26 +73,31 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 				}
 			}
 			// Prediction: Not Taken (0)
-			else if (ht.was_taken[decimal] == false){
+			else if (ht.was_taken[(int) bits] == 0){
 						
 				// Not Taken ---> Continue to pull instrcutions from Instruction Memory as we normally would.
-									
+				pred_valid = pipleline[4].pc == (pipeline[3].pc + 4);				
 				// If we find out prediction is wrong and we need to take the branch...
 				// Jump to the Target Address and flush the previous stages
-				if (branch_cond == true){
-					// Jump to target address and flush previous instructions (4 instructions)
-					for (int i = 0; i < 4; i++){ insert_no_op(i, pipeline); }
-				}
 					
 				// If our prediction is correct.. 
 				// Do nothing, we're already set up to handle this. 	
 			}
 			// nothing is in that slot yet, i.e, hash_table[decimal].address == NULL && hash_table[decimal].was_taken == -1 
-			else{
-								
+			else if (ht_contains((int) bits, &ht) == false){
+					
+				// we predict not taken
+				pred_valid = pipleline[4].pc == (pipeline[3].pc + 4);	
+			}
+				
+			if (pred_valid == false){
+				
+				// update the hash table
+				bool taken = (pipeline[4].pc != (pipeline[3].pc + 4));
+				ht_add((int) bits, pipeline[4].pc, taken, &ht)
 			}
 		}
-	}
+	//}
 	// 2 Bit Branch Predictor
 	else if (prediction_method == 2){
 		
