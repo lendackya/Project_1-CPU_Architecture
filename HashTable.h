@@ -1,3 +1,9 @@
+//
+//	CoE 1541 Fall 2016 Project 1
+//	8-Stage Pipelined CPU Trace-Simulator
+//	by Max Garber <mbg21@pitt.edu> & Andrew Lendacky <anl119@pitt.edu>
+//
+
 #ifndef HASH_TABLE
 #define HASH_TABLE
 
@@ -19,6 +25,7 @@ void init_hash_table(hash_table* ht){
 	}
 }
 
+#ifndef PIPELINEDCPU
 int is_big_endian() {
 	union {
 		uint32_t i;
@@ -26,6 +33,7 @@ int is_big_endian() {
 	} bint = { 0x01020304 };
 	return bint.c[0] == 1;
 }
+#endif
 
 __uint32_t getBits9to4(__uint32_t data) {
 	if(is_big_endian()) {
