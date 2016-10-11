@@ -48,28 +48,26 @@ void check_hazards(){
 	
 	// Data Hazards: 
 		
-		if (will_write_to_reg(0) && will_read_from_reg(2)){
+		// (a) If an instruction in EX1 will write into a register while the instruction in ID is reading from register X, ...
+		if (will_write_to_reg(3) && will_read_from_reg(2)){
 			
-			if (pipeline[0].rd == pipelin[2].rd){
-				DATA_HAZARD_FLG_ONE = true; 
-			}
+			if ((pipeline[3].rd == pipeline[2].rs) || (pipeline[3].rd == pipeline[2].rt )){	DATA_HAZARD_FLG_ONE = true;  }
+		}
+		
+		// (b) If an instruction in EX2 is a load instruction which will write into register X while the instruction in ID is reading from X...
+		if ( will_read_from_memory(4) && will_read_from_reg(2) ){
 			
-		}else if ( pipeline[4].type == ti_LOAD && (strcmp(pipeline[2].type, "READ") == 0) ){
+			if (pipeline[4].rt == pipeline[2].rt || pipeline[4].rt == pipeline[2].rs){ DATA_HAZARD_FLG_TWO = true; } // set flag		
+		}
+		// (c) If an instruction in MEM1 is a load instruction which will write into a register X while the instruction in ID is reading from register X..
+		if ( will_read_from_memory(5) && will_read_from_reg(2) ){
 			
-			if (pipeline[4].rt == pipeline[0].rt ){ DATA_HAZARD_FLG_TWO = true; } // set flag
-			
-		}else if ( (strcmp(pipeline[5].type , "LOAD") == 0) && (strcmp(pipeline[2].type, "READ") == 0) ){
-			
-			if (pipelin[5].rt == pipeline[2].rt){ DATA_HAZARD_FLG_THREE = true; } // set flag
+			if (pipelin[5].rt == pipeline[2].rt || pipeline[5].r == pipeline[2].rs){ DATA_HAZARD_FLG_THREE = true; } // set flag
 		}
 		
 	// Structural Hazards: 
-		
-		if (pipeline[7]){
-			
-			STRUCTURAL_HAZARD_FLG = true; 
-		}
-		
+		// If the instruction in WB is trying yo write into the reg. file whil the instruction at ID is trying to read from the reg. file...
+		if (will_write_to_reg(7) && will_read_from_reg(2)){ STRUCTURAL_HAZARD_FLG = true; }
 		
 	// Control Hazards: 
 		
