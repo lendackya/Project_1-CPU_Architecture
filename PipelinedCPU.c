@@ -11,6 +11,7 @@
 #include <string.h>
 #include "PipelinedCPU.h"
 #include "HashTable.h"
+#include "HazardControl.h"
 
 
 //	Global Variables
@@ -94,6 +95,7 @@ void print_trace_item(trace_item_t* ti) {
 }
 
 void print_pipeline() {
+	printf("———————————————————————————————————————————————————————————————————————————\n");
 	printf("STEP: %d\n", step);
 	printf("   IF1 | ");
 	print_trace_item(&(pipeline[0]));
@@ -111,7 +113,6 @@ void print_pipeline() {
 	print_trace_item(&(pipeline[6]));
 	printf("    WB | ");
 	print_trace_item(&(pipeline[7]));
-	printf("—————————————————————————————————————————————————————————————————————————––\n");
 }
 
 
@@ -128,6 +129,8 @@ int main(int argc, char *argv[]) {
 	//	prime the pipe
 	bool escapeToPipeDraining = false;
 	while(1) {
+		clear_flags();
+		
 		//	advance each stage's instruction
 		for(int i=7; i>=0; i--) {
 			pipeline[i] = pipeline[i-1];
@@ -152,6 +155,14 @@ int main(int argc, char *argv[]) {
 		}
 		//	for diagnostics for now
 		print_pipeline();
+		
+		//	check for hazards
+		check_hazards(pipeline);
+		print_hazards();
+		
+		//	branch prediction
+		//branch_pred(0, pipeline);
+		
 		//	limit test runs for now
 		if(step >= STEPLIMIT) break;
 	}//end-while
