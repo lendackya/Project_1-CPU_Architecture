@@ -1,0 +1,1464 @@
+Opening trace file: sample.tr
+———————————————————————————————————————————————————————————————————————————
+STEP: 0
+   IF1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   IF2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    ID |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 1
+   IF1 |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+   IF2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    ID |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 2
+   IF1 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+   IF2 |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+    ID |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 3
+   IF1 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+   IF2 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+    ID |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 4
+   IF1 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+   IF2 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+    ID |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+   EX1 |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 5
+   IF1 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   IF2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+    ID |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+   EX1 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+   EX2 |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 5
+   IF1 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   IF2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+    ID |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+  MEM1 |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 6
+   IF1 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   IF2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+    ID |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+  MEM1 |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 7
+   IF1 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+   IF2 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+    ID |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+   EX1 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+  MEM2 |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 8
+   IF1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    ID |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   EX1 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+   EX2 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+    WB |   LOAD (pc: 0x002000A0) rs: 029, rt: 255, rd: 016, addr: 0x7FFF8000
+Hazards: Structural=1, Data1=1, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 9
+   IF1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    ID |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   EX1 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+   EX2 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 9
+   IF1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    ID |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   EX1 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+   EX2 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 9
+   IF1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    ID |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+  MEM1 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+———————————————————————————————————————————————————————————————————————————
+STEP: 10
+   IF1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    ID |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+  MEM1 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x002000A4) rs: 255, rt: 255, rd: 028, addr: 0x00001001
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 11
+   IF1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    ID |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+  MEM1 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 11
+   IF1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    ID |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+  MEM1 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 12
+   IF1 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+    ID |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+   EX1 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+  MEM2 |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 13
+   IF1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   IF2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+   EX2 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+    WB |  ITYPE (pc: 0x002000A8) rs: 028, rt: 255, rd: 028, addr: 0xFFFFC000
+Hazards: Structural=1, Data1=1, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 14
+   IF1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   IF2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+   EX2 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 14
+   IF1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   IF2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+   EX2 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 14
+   IF1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   IF2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+  MEM1 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+———————————————————————————————————————————————————————————————————————————
+STEP: 15
+   IF1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   IF2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+  MEM1 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x002000AC) rs: 029, rt: 255, rd: 017, addr: 0x00000004
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 16
+   IF1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   IF2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+  MEM1 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 16
+   IF1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   IF2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+  MEM1 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 17
+   IF1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+    ID |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+  MEM2 |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 17
+   IF1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+    ID |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    WB |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+———————————————————————————————————————————————————————————————————————————
+STEP: 18
+   IF1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+    ID |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    WB |  ITYPE (pc: 0x002000B0) rs: 017, rt: 255, rd: 003, addr: 0x00000004
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 19
+   IF1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+    ID |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 19
+   IF1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+    ID |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 20
+   IF1 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+    ID |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   EX1 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x002000B4) rs: 255, rt: 016, rd: 002, addr: 0x00000002
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 21
+   IF1 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+    ID |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+   EX2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 22
+   IF1 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+  MEM1 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  RTYPE (pc: 0x002000B8) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 23
+   IF1 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+  MEM1 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 23
+   IF1 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+  MEM1 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 24
+   IF1 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+   IF2 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+    ID |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM1 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+  MEM2 |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 25
+   IF1 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+    ID |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+    WB |  RTYPE (pc: 0x002000BC) rs: 000, rt: 003, rd: 018, addr: 0x00000000
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 26
+   IF1 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+    ID |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 26
+   IF1 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+    ID |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM2 |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 27
+   IF1 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+   IF2 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+    ID |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+   EX1 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+    WB |  STORE (pc: 0x002000C0) rs: 028, rt: 018, rd: 255, addr: 0x10004884
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 28
+   IF1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+   IF2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+    ID |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX1 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+   EX2 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+  MEM2 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+    WB |  ITYPE (pc: 0x002000C4) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 29
+   IF1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+   IF2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+    ID |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX1 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+   EX2 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+  MEM2 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 29
+   IF1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+   IF2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+    ID |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX1 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+   EX2 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+  MEM2 |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 30
+   IF1 |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   IF2 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+    ID |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+   EX1 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX2 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+  MEM1 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+  MEM2 |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+    WB |  RTYPE (pc: 0x002000C8) rs: 000, rt: 016, rd: 004, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 31
+   IF1 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+   IF2 |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+    ID |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+   EX1 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+   EX2 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM1 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+  MEM2 |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+    WB |  RTYPE (pc: 0x002000CC) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 32
+   IF1 |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+   IF2 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+    ID |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+   EX2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+  MEM1 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM2 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+    WB |  RTYPE (pc: 0x002000D0) rs: 000, rt: 018, rd: 006, addr: 0x00000000
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 33
+   IF1 |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+   IF2 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+    ID |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+   EX2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+  MEM1 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM2 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 33
+   IF1 |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+   IF2 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+    ID |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+   EX2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+  MEM1 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM2 |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 34
+   IF1 |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+   IF2 |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+    ID |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+   EX1 |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+   EX2 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+  MEM1 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+  MEM2 |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+    WB |  JTYPE (pc: 0x002000D4) rs: 255, rt: 255, rd: 255, addr: 0x0020A010
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 35
+   IF1 | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+   IF2 |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+    ID |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+   EX1 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+   EX2 |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+  MEM2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+    WB |  ITYPE (pc: 0x0020A010) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 36
+   IF1 | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+   IF2 |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+    ID |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+   EX1 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+   EX2 |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+  MEM2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 36
+   IF1 | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+   IF2 |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+    ID |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+   EX1 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+   EX2 |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM1 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+  MEM2 |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 37
+   IF1 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+   IF2 | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+    ID |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+   EX1 |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+   EX2 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+  MEM1 |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+  MEM2 |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+    WB |  STORE (pc: 0x0020A014) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FE0
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 38
+   IF1 | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+   IF2 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+    ID | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX1 |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+   EX2 |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+  MEM1 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+  MEM2 |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+    WB |  JTYPE (pc: 0x0020A018) rs: 255, rt: 255, rd: 255, addr: 0x0020CD70
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 39
+   IF1 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+   IF2 | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+    ID |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+   EX1 | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX2 |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+  MEM1 |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+  MEM2 |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+    WB |  ITYPE (pc: 0x0020CD70) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE8
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 40
+   IF1 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   IF2 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+    ID | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX1 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+   EX2 | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+  MEM1 |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+  MEM2 |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+    WB |  STORE (pc: 0x0020CD74) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FC8
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=1
+detected control hazard from EX2.
+———————————————————————————————————————————————————————————————————————————
+STEP: 41
+   IF1 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   IF2 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+    ID | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX1 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+  MEM2 |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+    WB |  RTYPE (pc: 0x0020CD78) rs: 000, rt: 005, rd: 016, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 42
+   IF1 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   IF2 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+    ID | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX1 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+    WB |  STORE (pc: 0x0020CD7C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FCC
+———————————————————————————————————————————————————————————————————————————
+STEP: 43
+   IF1 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   IF2 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+    ID | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX1 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+handled control hazard at EX2.
+———————————————————————————————————————————————————————————————————————————
+STEP: 43
+   IF1 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   IF2 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+    ID | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX1 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+———————————————————————————————————————————————————————————————————————————
+STEP: 44
+   IF1 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   IF2 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+    ID | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX1 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020CD80) rs: 016, rt: 000, rd: 255, addr: 0x0020CDA8
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 45
+   IF1 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+   IF2 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+    ID |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+   EX1 | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+   EX2 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 46
+   IF1 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+   IF2 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+    ID |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   EX1 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+   EX2 | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+  MEM1 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=1
+detected control hazard from EX2.
+———————————————————————————————————————————————————————————————————————————
+STEP: 47
+   IF1 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+   IF2 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+    ID |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   EX1 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+  MEM2 |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 48
+   IF1 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+   IF2 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+    ID |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   EX1 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+    WB |   LOAD (pc: 0x0020CD84) rs: 016, rt: 255, rd: 004, addr: 0x7FFF8007
+———————————————————————————————————————————————————————————————————————————
+STEP: 49
+   IF1 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+   IF2 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+    ID |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   EX1 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+handled control hazard at EX2.
+———————————————————————————————————————————————————————————————————————————
+STEP: 49
+   IF1 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+   IF2 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+    ID |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   EX1 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+———————————————————————————————————————————————————————————————————————————
+STEP: 50
+   IF1 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+   IF2 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+    ID |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   EX1 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020CD88) rs: 004, rt: 000, rd: 255, addr: 0x0020CDA8
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 51
+   IF1 |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+   IF2 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+    ID |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+   EX1 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+   EX2 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 52
+   IF1 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+   IF2 |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+    ID |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+   EX1 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+   EX2 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+  MEM1 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 53
+   IF1 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+   IF2 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+    ID |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+   EX1 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+   EX2 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+  MEM1 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+  MEM2 |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 54
+   IF1 | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+   IF2 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+    ID |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+   EX1 |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+   EX2 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+  MEM1 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+  MEM2 |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+    WB |  ITYPE (pc: 0x0020CD8C) rs: 000, rt: 255, rd: 005, addr: 0x0000002F
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 55
+   IF1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   IF2 | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+    ID |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+   EX1 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+   EX2 |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+  MEM1 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+  MEM2 |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+    WB |  JTYPE (pc: 0x0020CD90) rs: 255, rt: 255, rd: 255, addr: 0x0020A990
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 56
+   IF1 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+    ID | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+   EX1 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+   EX2 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+  MEM1 |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+  MEM2 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+    WB |  ITYPE (pc: 0x0020A990) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFE0
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 57
+   IF1 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+    ID | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+   EX1 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+   EX2 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+  MEM1 |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+  MEM2 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 57
+   IF1 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+    ID | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+   EX1 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+   EX2 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+  MEM1 |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+  MEM2 |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 58
+   IF1 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+   IF2 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+    ID |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX1 | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+   EX2 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+  MEM1 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+  MEM2 |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+    WB |  STORE (pc: 0x0020A994) rs: 029, rt: 017, rd: 255, addr: 0x7FFF7FAC
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 59
+   IF1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   IF2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    ID |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX2 | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+  MEM1 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+  MEM2 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+    WB |  ITYPE (pc: 0x0020A998) rs: 005, rt: 255, rd: 017, addr: 0x000000FF
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=1
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 60
+   IF1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   IF2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    ID |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX2 | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+  MEM1 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+  MEM2 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 60
+   IF1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   IF2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    ID |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX2 | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+  MEM1 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+  MEM2 |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=1
+detected control hazard from EX2.
+———————————————————————————————————————————————————————————————————————————
+STEP: 61
+   IF1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   IF2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    ID |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+  MEM2 |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+    WB |  STORE (pc: 0x0020A99C) rs: 029, rt: 031, rd: 255, addr: 0x7FFF7FB0
+———————————————————————————————————————————————————————————————————————————
+STEP: 62
+   IF1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   IF2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    ID |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+    WB |  STORE (pc: 0x0020A9A0) rs: 029, rt: 016, rd: 255, addr: 0x7FFF7FA8
+———————————————————————————————————————————————————————————————————————————
+STEP: 63
+   IF1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   IF2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    ID |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+handled control hazard at EX2.
+———————————————————————————————————————————————————————————————————————————
+STEP: 63
+   IF1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   IF2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    ID |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+———————————————————————————————————————————————————————————————————————————
+STEP: 64
+   IF1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   IF2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    ID |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020A9A4) rs: 017, rt: 000, rd: 255, addr: 0x0020A9B4
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 65
+   IF1 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+   IF2 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+    ID |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+   EX1 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 66
+   IF1 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+   IF2 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+    ID |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   EX1 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+   EX2 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 67
+   IF1 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   IF2 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+    ID |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+   EX1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+   EX2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+  MEM1 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+  MEM2 |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 68
+   IF1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   IF2 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+    ID |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+   EX1 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+   EX2 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+  MEM1 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+  MEM2 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+    WB |  RTYPE (pc: 0x0020A9B4) rs: 000, rt: 000, rd: 016, addr: 0x00000000
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 69
+   IF1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   IF2 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+    ID |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+   EX1 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+   EX2 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+  MEM1 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+  MEM2 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 69
+   IF1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   IF2 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+    ID |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+   EX1 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+   EX2 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+  MEM1 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+  MEM2 |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 70
+   IF1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   IF2 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+    ID | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   EX1 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+   EX2 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+  MEM1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+  MEM2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    WB |  RTYPE (pc: 0x0020A9B8) rs: 000, rt: 017, rd: 005, addr: 0x00000000
+Hazards: Structural=1, Data1=1, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 71
+   IF1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   IF2 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+    ID | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   EX1 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+   EX2 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+  MEM1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+  MEM2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 71
+   IF1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   IF2 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+    ID | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   EX1 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+   EX2 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+  MEM1 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+  MEM2 |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 71
+   IF1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   IF2 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+    ID | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+  MEM1 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+  MEM2 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+    WB |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+———————————————————————————————————————————————————————————————————————————
+STEP: 72
+   IF1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   IF2 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+    ID | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+  MEM1 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+  MEM2 |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+    WB |  JTYPE (pc: 0x0020A9BC) rs: 255, rt: 255, rd: 255, addr: 0x0020E8F8
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 73
+   IF1 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+   IF2 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+    ID |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX1 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+  MEM2 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+    WB |  ITYPE (pc: 0x0020E8F8) rs: 029, rt: 255, rd: 029, addr: 0xFFFFFFF0
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 74
+   IF1 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+   IF2 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+    ID |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX1 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+  MEM2 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 74
+   IF1 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+   IF2 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+    ID |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX1 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+  MEM2 |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 75
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX2 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+    WB |  ITYPE (pc: 0x0020E8FC) rs: 005, rt: 255, rd: 005, addr: 0x000000FF
+Hazards: Structural=1, Data1=1, Data2=0, Data3=0, Control=1
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 76
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX2 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 76
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX2 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=1
+detected control hazard from EX2.
+———————————————————————————————————————————————————————————————————————————
+STEP: 77
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x0020E900) rs: 004, rt: 255, rd: 002, addr: 0x00000003
+———————————————————————————————————————————————————————————————————————————
+STEP: 78
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 79
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+handled control hazard at EX2.
+———————————————————————————————————————————————————————————————————————————
+STEP: 79
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+———————————————————————————————————————————————————————————————————————————
+STEP: 80
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB | BRANCH (pc: 0x0020E904) rs: 002, rt: 000, rd: 255, addr: 0x0020E920
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 80
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 81
+   IF1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    ID |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 82
+   IF1 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   IF2 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+   EX1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 83
+   IF1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+    ID |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+   EX2 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 83
+   IF1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+    ID |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+  MEM1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+———————————————————————————————————————————————————————————————————————————
+STEP: 84
+   IF1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+    ID |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+  MEM1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x0020E920) rs: 255, rt: 255, rd: 008, addr: 0x00007EFE
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 85
+   IF1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+    ID |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+  MEM1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 85
+   IF1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+    ID |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+  MEM1 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 86
+   IF1 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+   IF2 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   EX1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+  MEM2 |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 86
+   IF1 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+   IF2 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    WB |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+———————————————————————————————————————————————————————————————————————————
+STEP: 87
+   IF1 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+   IF2 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    WB |  ITYPE (pc: 0x0020E924) rs: 008, rt: 255, rd: 008, addr: 0x0000FEFF
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 88
+   IF1 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+   IF2 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 88
+   IF1 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+   IF2 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 89
+   IF1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   IF2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+    ID |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x0020E928) rs: 255, rt: 005, rd: 002, addr: 0x00000008
+Hazards: Structural=1, Data1=1, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 90
+   IF1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   IF2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+    ID |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 90
+   IF1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   IF2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+    ID |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=1, Data2=0, Data3=0, Control=0
+detected data hazard from EX1.
+handled data hazard at EX1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 90
+   IF1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   IF2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+    ID |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 91
+   IF1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   IF2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+    ID |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 92
+   IF1 |  ITYPE (pc: 0x0020E940) rs: 004, rt: 255, rd: 004, addr: 0x00000004
+   IF2 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+    ID |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+   EX1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+   EX2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM1 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  RTYPE (pc: 0x0020E92C) rs: 005, rt: 002, rd: 009, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 93
+   IF1 |  RTYPE (pc: 0x0020E944) rs: 006, rt: 008, rd: 003, addr: 0x00000000
+   IF2 |  ITYPE (pc: 0x0020E940) rs: 004, rt: 255, rd: 004, addr: 0x00000004
+    ID |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   EX1 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+   EX2 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+  MEM1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+  MEM2 |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 94
+   IF1 |  RTYPE (pc: 0x0020E948) rs: 000, rt: 006, rd: 002, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x0020E944) rs: 006, rt: 008, rd: 003, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E940) rs: 004, rt: 255, rd: 004, addr: 0x00000004
+   EX1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   EX2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+  MEM1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |  ITYPE (pc: 0x0020E930) rs: 255, rt: 009, rd: 002, addr: 0x00000010
+Hazards: Structural=1, Data1=0, Data2=0, Data3=0, Control=0
+detected WB-structural hazard.
+handled data hazard at WB.
+———————————————————————————————————————————————————————————————————————————
+STEP: 95
+   IF1 |  RTYPE (pc: 0x0020E948) rs: 000, rt: 006, rd: 002, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x0020E944) rs: 006, rt: 008, rd: 003, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E940) rs: 004, rt: 255, rd: 004, addr: 0x00000004
+   EX1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   EX2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+  MEM1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+———————————————————————————————————————————————————————————————————————————
+STEP: 95
+   IF1 |  RTYPE (pc: 0x0020E948) rs: 000, rt: 006, rd: 002, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x0020E944) rs: 006, rt: 008, rd: 003, addr: 0x00000000
+    ID |  ITYPE (pc: 0x0020E940) rs: 004, rt: 255, rd: 004, addr: 0x00000004
+   EX1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+   EX2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+  MEM1 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+  MEM2 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=0, Control=0
+———————————————————————————————————————————————————————————————————————————
+STEP: 96
+   IF1 |  RTYPE (pc: 0x0020E94C) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x0020E948) rs: 000, rt: 006, rd: 002, addr: 0x00000000
+    ID |  RTYPE (pc: 0x0020E944) rs: 006, rt: 008, rd: 003, addr: 0x00000000
+   EX1 |  ITYPE (pc: 0x0020E940) rs: 004, rt: 255, rd: 004, addr: 0x00000004
+   EX2 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+  MEM1 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+  MEM2 |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000
+    WB |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+Hazards: Structural=0, Data1=0, Data2=0, Data3=1, Control=0
+detected data hazard from MEM1.
+handled data hazard at MEM1.
+———————————————————————————————————————————————————————————————————————————
+STEP: 96
+   IF1 |  RTYPE (pc: 0x0020E94C) rs: 003, rt: 002, rd: 003, addr: 0x00000000
+   IF2 |  RTYPE (pc: 0x0020E948) rs: 000, rt: 006, rd: 002, addr: 0x00000000
+    ID |  RTYPE (pc: 0x0020E944) rs: 006, rt: 008, rd: 003, addr: 0x00000000
+   EX1 |    NOP (pc: 0x00000000) rs: 000, rt: 000, rd: 000, addr: 0x00000000
+   EX2 |  ITYPE (pc: 0x0020E940) rs: 004, rt: 255, rd: 004, addr: 0x00000004
+  MEM1 |  RTYPE (pc: 0x0020E93C) rs: 000, rt: 008, rd: 007, addr: 0x00000000
+  MEM2 |   LOAD (pc: 0x0020E938) rs: 004, rt: 255, rd: 006, addr: 0xFFFF00D4
+    WB |  RTYPE (pc: 0x0020E934) rs: 009, rt: 002, rd: 009, addr: 0x00000000

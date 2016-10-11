@@ -5,6 +5,8 @@
 #ifndef HAZARD_CONTROL
 #define HAZARD_CONTROL
 
+extern int hazard_flag;
+
 // GLOBAL FLAGS
 bool STRUCTURAL_HAZARD_FLG = false; 
 bool DATA_HAZARD_FLG_ONE = false; 
@@ -91,6 +93,20 @@ void check_hazards(trace_item_t pipeline[]){
 			// if prediction is wrong:
 				CONTROL_HAZARD_FLG = true;  			
 		}
+		
+		
+	//	assign hazard stalling based on flags & priority
+	if (STRUCTURAL_HAZARD_FLG == true) {
+		hazard_flag = 1;
+	} else if (DATA_HAZARD_FLG_THREE == true) {
+		hazard_flag = 2;
+	} else if (DATA_HAZARD_FLG_TWO == true || CONTROL_HAZARD_FLG == true) {
+		hazard_flag = 3;
+	} else if (DATA_HAZARD_FLG_ONE == true) {
+		hazard_flag = 4;
+	} else {
+		hazard_flag = 0;
+	}
 }
 
 void print_hazards() {
@@ -103,7 +119,7 @@ void avoid_hazards(){
 	
 	if (STRUCTURAL_HAZARD_FLG == true){
 		
-		
+		// Stall IF1, IF2, 
 	} 
 	
 	if (DATA_HAZARD_FLG_ONE == true){

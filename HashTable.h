@@ -10,7 +10,7 @@
 #include "CPUParameters.h"
 
 typedef struct hash_table{
-	char* addresses[HTMAXSIZE]; 	// array of addresses
+	__uint32_t addresses[HTMAXSIZE]; 	// array of addresses
 	int was_taken[HTMAXSIZE];	 	// array that stores is the prediction was true (1) or false (0) or not touched (-1)
 	int max_size; 					// how big the table is
 	
@@ -22,7 +22,7 @@ void init_hash_table(hash_table* ht){
 	ht->max_size = HTMAXSIZE; // how many positions
 	// init all the address and predicted values
 	for (int i = 0; i < ht->max_size; i++){
-		ht->addresses[i] = "NULL";
+		ht->addresses[i] = 0;
 		ht->was_taken[i] = -1; // -1 denotes that the positions has not been touched yet
 	}
 }
@@ -46,7 +46,7 @@ __uint32_t getBits9to4(__uint32_t data) {
 }
 
 // Adds the address andif it was taken (1) or not taken (0)
-void ht_add(int key, char* address, int was_taken, hash_table* ht){
+void ht_add(int key, __uint32_t address, int was_taken, hash_table* ht){
 	
 	// check key size error
 	if ((key >= 0) && (key < ht->max_size)){
@@ -64,7 +64,7 @@ bool ht_contains(int key, hash_table* ht){
 }
 
 // Prints the Address and branch predicted value
-void ht_print(int key, hash_table* ht){ printf("Index: %d, Address: %s, Taken: %d \n", key, ht->addresses[key], ht->was_taken[key]); }
+void ht_print(int key, hash_table* ht){ printf("Index: %d, Address: 0x%X, Taken: %d \n", key, ht->addresses[key], ht->was_taken[key]); }
 
 
 // Loop through the Hash Table and prints all the Indices that have 'true' as their predicted value

@@ -8,15 +8,15 @@
 // Checks the IF1 stage, and gets the type of instruction,
 // i.e., "NOP", " RTYPE", " ITYPE", "  LOAD", " STORE", "BRANCH", " JTYPE", "SPECIAL", "JRTYPE"
 // We only really care if the type is a BRANCH instruction..
-char* get_instruction_type(trace_item_t* pipeline[]){
+char* get_instruction_type(trace_item_t pipeline[]){
 	
 	// Check IF1 for to see if we have a branch instruction
-	return = typestrings[pipeline[0].type];
+	return typestrings[pipeline[0].type];
 }
 
 // Evaluates the Branch Condition and returns true if the condition is true, 
 // and false if the condition is false.
-bool was_branch_taken(trace_item_t* pipeline[]){
+bool was_branch_taken(trace_item_t pipeline[]){
 	
 	// We did take a branch..
 	if (pipeline[4].pc != (pipeline[3].pc + 4)){ return true; }
@@ -25,17 +25,16 @@ bool was_branch_taken(trace_item_t* pipeline[]){
 
 
 // Predicts the Branch Instruction and takes the correct action
-void branch_pred(int prediction_method, trace_item_t* pipline[]){
+void branch_pred(int prediction_method, trace_item_t pipeline[], hash_table* ht){
 	
 	
 	// Check if we have to branch
 	char* instn_type = get_instruction_type(pipeline); 
-	bool branch_cond = evalulate_branch_cond(pipeline);
 	
 	// Predict 'Not Taken'
 	if (prediction_method == 0){
 				
-		if ( (strcmp(condition_str, "BRANCH") == 0) && (was_branch_taken(pipeline) == true) ){
+		if ( (strcmp(instn_type, "BRANCH") == 0) && (was_branch_taken(pipeline) == true) ){
 		
 			// stall previous stages by inserting NOPs
 		
@@ -54,7 +53,7 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 		// convert bits to int, 0-63
 		bool pred_valid; 
 		// Prediction: Taken (1)
-		if (ht.was_taken[(int) bits] == 1){
+		if (ht->was_taken[(int) bits] == 1){
 			
 			// Taken ---> Jump to the Target Address and start grabbing instructions from that address.
 			
@@ -64,10 +63,10 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 			// If prediction was correct --> Do nothing. We're already set up to handle this.
 		}
 		// Prediction: Not Taken (0)
-		else if (ht.was_taken[(int) bits] == 0){
+		else if (ht->was_taken[(int) bits] == 0){
 					
 			// Not Taken ---> Continue to pull instrcutions from Instruction Memory as we normally would.
-			pred_valid = pipleline[4].pc == (pipeline[3].pc + 4);				
+			pred_valid = pipeline[4].pc == (pipeline[3].pc + 4);				
 			// If we find out prediction is wrong and we need to take the branch...
 			// Jump to the Target Address and flush the previous stages
 				
@@ -75,17 +74,17 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 			// Do nothing, we're already set up to handle this. 	
 		}
 		// nothing is in that slot yet, i.e, hash_table[decimal].address == NULL && hash_table[decimal].was_taken == -1 
-		else if (ht_contains((int) bits, &ht) == false){
+		else if (ht_contains((int) bits, ht) == false){
 				
 			// we predict not taken
-			pred_valid = pipleline[4].pc == (pipeline[3].pc + 4);	
+			pred_valid = pipeline[4].pc == (pipeline[3].pc + 4);	
 		}
 			
 		if (pred_valid == false){
 			
 			// update the hash table
 			bool taken = (pipeline[4].pc != (pipeline[3].pc + 4));
-			ht_add((int) bits, pipeline[4].pc, taken, &ht)
+			ht_add((int) bits, pipeline[4].pc, taken, ht);
 		}
 	}
 	else if (prediction_method == 2){
@@ -101,7 +100,7 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 		
 		bool predicting_taken;						//	current prediction
 		bool pred_valid;   							//	validity of current prediction
-		int ht_pred = ht.was_taken[(int) bits];	//	prediction int from hashtable
+		int ht_pred = ht->was_taken[(int) bits];	//	prediction int from hashtable
 		int new_ht_pred;							//	value to put in hashtable for next prediction
 		
 		//	determine prediction based on hashtable
@@ -114,7 +113,7 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 		}
 		
 		//	determine if it was valid
-		pred_valid = (predicting_taken) && (pipeline[4] != (pipeline[3]+4));
+		pred_valid = (predicting_taken) && (pipeline[4].pc != (pipeline[3].pc + 4));
 		
 		//	determine new hashtable prediction int value
 		if (ht_pred == -1 || ht_pred == 10){
@@ -130,7 +129,7 @@ void branch_pred(int prediction_method, trace_item_t* pipline[]){
 		}
 		
 		//	update hashtable
-		ht_add((int) bits, pipeline[4].pc, new_ht_pred, &ht);
+		ht_add((int) bits, pipeline[4].pc, new_ht_pred, ht);
 	}
 	
 }

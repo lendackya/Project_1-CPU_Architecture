@@ -13,6 +13,9 @@
 #include "HashTable.h"
 #include "HazardControl.h"
 #include "CPUParameters.h"
+#include "branchPredictor.h"
+
+#define DEBUG 1
 
 //	Global Variables
 char* trace_filename;
@@ -22,8 +25,8 @@ int trace_buf_ptr, trace_buf_end;
 bool trace_view_on;
 unsigned int step;
 trace_item_t pipeline[8];
-
 hash_table ht;
+int hazard_flag;
 
 //	Simulation Functions
 void sim_init(int argc, char *argv[]) {
@@ -115,6 +118,15 @@ void print_pipeline() {
 	print_trace_item(&(pipeline[7]));
 }
 
+void insert_nop(int stage){
+	pipeline[stage].type = ti_NOP;
+	pipeline[stage].rs = 0;
+	pipeline[stage].rt = 0;
+	pipeline[stage].rd = 0;
+	pipeline[stage].pc = 0x0;
+	pipeline[stage].addr = 0x0;
+}
+
 
 //	Main function
 int main(int argc, char *argv[]) {
@@ -128,49 +140,120 @@ int main(int argc, char *argv[]) {
 	
 	//	prime the pipe
 	bool escapeToPipeDraining = false;
-	while(1) {
-		clear_flags();
-		
-		//	advance each stage's instruction
-		for(int i=7; i>=0; i--) {
-			pipeline[i] = pipeline[i-1];
-		}
-		
-		//	need to intervene for hazards, forwarding, branch prediction, &c.
+	hazard_flag = 0;
 	
-		size = trace_get_item(&tr_entry);
-		if(!size) {
-			//	no more trace items to run through simulation 
-			printf("grabbed last instruction from buffer after %u cycles\n", step);
-			break;
-		} else {
-			//	loading the incoming trace item into the pipeline queue
-			pipeline[0].type = tr_entry->type;
-			pipeline[0].rs = tr_entry->rs;
-			pipeline[0].rt = tr_entry->rt;
-			pipeline[0].rd = tr_entry->rd;
-			pipeline[0].pc = tr_entry->pc;
-			pipeline[0].addr = tr_entry->addr;
-			step++;
-		}
-		//	for diagnostics for now
-		print_pipeline();
+	while(escapeToPipeDraining == false) {
+		//	diagnostics
+		if (DEBUG) print_pipeline();
 		
-		//	check for hazards
+		//	run branch predictor
+		branch_pred(0, pipeline, &ht);
+		
+		//	check for hazards - use prioritization
 		check_hazards(pipeline);
-		print_hazards();
 		
-		//	branch prediction
-		//branch_pred(0, pipeline);
+		if (DEBUG) print_hazards();
+		
+		//	handle hazards (hazard_flag)
+		//...
+		
+		if (hazard_flag == 0) {
+			// no hazards, advance everything normally
+			for(int i=7; i>=0; i--) {
+				pipeline[i] = pipeline[i-1];
+			}
+			size = trace_get_item(&tr_entry);
+			if(!size) {
+				//	no more trace items to run through simulation 
+				if (DEBUG) printf("grabbed last instruction from buffer after %u cycles\n", step);
+				escapeToPipeDraining = true;
+				break;
+			} else {
+				//	loading the incoming trace item into the pipeline queue
+				pipeline[0].type = tr_entry->type;
+				pipeline[0].rs = tr_entry->rs;
+				pipeline[0].rt = tr_entry->rt;
+				pipeline[0].rd = tr_entry->rd;
+				pipeline[0].pc = tr_entry->pc;
+				pipeline[0].addr = tr_entry->addr;
+				step++;
+			}
+		} else if (hazard_flag == 1) {
+			// WB structural hazard. only WB advances everything else stalls
+			if (DEBUG) printf("detected WB-structural hazard.\n");
+			insert_nop(7);
+			step++;
+			if (DEBUG) printf("handled data hazard at WB.\n");
+			if (DEBUG) print_pipeline();
+		} else if (hazard_flag == 2) {
+			//	data hazard from MEM1
+			if (DEBUG) printf("detected data hazard from MEM1.\n");
+			//	stall ID & preceding stages, advance everything else
+			for(int i=7; i>2; i--) {
+				pipeline[i] = pipeline[i-1];
+			}
+			insert_nop(3);
+			if (DEBUG) printf("handled data hazard at MEM1.\n");
+			if (DEBUG) print_pipeline();
+			step++;
+			break;
+		} else if (hazard_flag == 3) {
+			// data hazard from EX2 OR control hazard from EX2
+			//	need to check which
+			if (pipeline[4].type == ti_BRANCH) {
+				// control hazard IF we predicted wrong
+				if (DEBUG) printf("detected control hazard from EX2.\n");
+				//	stall all instructions behind the branch for four cycles to simulate flushing IF1, IF2, ID, & EX1
+				for(int j=0; j<3; j++) {
+					//	let everything at EX2 and beyond advance
+					for(int i=7; i>3; i--) {
+						pipeline[i] = pipeline[i-1];
+					}
+					insert_nop(4);
+					step++;
+					if (DEBUG) print_pipeline();
+				}
+				if (DEBUG) printf("handled control hazard at EX2.\n");
+				if (DEBUG) print_pipeline();
+			} else {
+				if (DEBUG) printf("detected data hazard from EX2.\n");
+				//	stall ID & preceding stages, advance everything else
+				for(int i=7; i>2; i--) {
+					pipeline[i] = pipeline[i-1];
+				}
+				insert_nop(3);
+				if (DEBUG) printf("handled data hazard at EX2.\n");
+				if (DEBUG) print_pipeline();
+				step++;
+			}
+			step++;
+			//break;
+		} else if (hazard_flag == 4) {
+			// data hazard from EX1. 
+			if (DEBUG) printf("detected data hazard from EX1.\n");
+			//	stall ID & preceding stages, advance everthing else
+			for(int i=7; i>2; i--) {
+				pipeline[i] = pipeline[i-1];
+			}
+			insert_nop(3);
+			if (DEBUG) printf("handled data hazard at EX1.\n");
+			if (DEBUG) print_pipeline();
+			step++;
+		} else {
+			printf("grave hazard detection error.\n");
+			break;
+		}
+		
+		
+		
+		//	clear flags
+		clear_flags();
 		
 		//	limit test runs for now
 		if(step >= STEPLIMIT) break;
 	}//end-while
 	
 	//	now drain the pipeline and track it
-	
-
-	
 	
 	
 	//	cleanup
