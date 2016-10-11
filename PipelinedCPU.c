@@ -12,7 +12,7 @@
 #include "PipelinedCPU.h"
 #include "HashTable.h"
 #include "HazardControl.h"
-
+#include "CPUParameters.h"
 
 //	Global Variables
 char* trace_filename;

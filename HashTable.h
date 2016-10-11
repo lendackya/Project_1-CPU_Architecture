@@ -7,17 +7,19 @@
 #ifndef HASH_TABLE
 #define HASH_TABLE
 
+#include "CPUParameters.h"
+
 typedef struct hash_table{
-	char* addresses[64]; // array of addresses
-	int was_taken[64];	 // array that stores is the prediction was true (1) or false (0) or not touched (-1)
-	int max_size; // how big the table is
+	char* addresses[HTMAXSIZE]; 	// array of addresses
+	int was_taken[HTMAXSIZE];	 	// array that stores is the prediction was true (1) or false (0) or not touched (-1)
+	int max_size; 					// how big the table is
 	
 } hash_table; 
 
 // Inititalizes the Hash Table
 void init_hash_table(hash_table* ht){
 	
-	ht->max_size = 64; // how many positions
+	ht->max_size = HTMAXSIZE; // how many positions
 	// init all the address and predicted values
 	for (int i = 0; i < ht->max_size; i++){
 		ht->addresses[i] = "NULL";

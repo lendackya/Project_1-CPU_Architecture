@@ -1,5 +1,6 @@
 #include "PipelinedCPU.h"
 #include "HashTable.h"
+#include "CPUParameters.h"
 
 #ifndef BRANCH_PREDICTOR
 #define BRANCH_PREDICTOR
