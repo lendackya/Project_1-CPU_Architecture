@@ -44,7 +44,7 @@ __uint32_t getBits9to4(__uint32_t data) {
 }
 
 // Adds the address andif it was taken (1) or not taken (0)
-void ht_add(int key, char* address, bool was_taken, hash_table* ht){
+void ht_add(int key, char* address, int was_taken, hash_table* ht){
 	
 	// check key size error
 	if ((key >= 0) && (key < ht->max_size)){
