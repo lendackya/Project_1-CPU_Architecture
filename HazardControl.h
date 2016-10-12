@@ -110,7 +110,7 @@ void check_hazards(trace_item_t pipeline[]){
 }
 
 void print_hazards() {
-	printf("Hazards: Structural=%d, Data1=%d, Data2=%d, Data3=%d, Control=%d\n", STRUCTURAL_HAZARD_FLG, DATA_HAZARD_FLG_ONE, DATA_HAZARD_FLG_TWO, DATA_HAZARD_FLG_THREE, CONTROL_HAZARD_FLG);
+	if (DEBUG) printf("Hazards: Structural=%d, Data1=%d, Data2=%d, Data3=%d, Control=%d\n", STRUCTURAL_HAZARD_FLG, DATA_HAZARD_FLG_ONE, DATA_HAZARD_FLG_TWO, DATA_HAZARD_FLG_THREE, CONTROL_HAZARD_FLG);
 }
 
 // Take neccessay action if the flag is true
