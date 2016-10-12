@@ -38,7 +38,7 @@ int is_big_endian() {
 #endif
 
 __uint32_t getBits9to4(__uint32_t data) {
-	if(is_big_endian()) {
+	if(!is_big_endian()) {
 		return ((data & 0x000003F0) >> 4);
 	} else {
 		return ((data & 0x0FC00000) << 4);
@@ -47,7 +47,7 @@ __uint32_t getBits9to4(__uint32_t data) {
 
 // Adds the address andif it was taken (1) or not taken (0)
 void ht_add(int key, __uint32_t address, int was_taken, hash_table* ht){
-	
+	if (DEBUG_BRANCHPRED) printf("ht_add(key:%d, addr:0x%X, was_taken:%d, ht)\n", key, address, was_taken);
 	// check key size error
 	if ((key >= 0) && (key < ht->max_size)){
 		
@@ -78,7 +78,8 @@ void ht_print_tracked_pos(hash_table* ht){
 
 // Loops through the whole table and prints the details
 void ht_print_full_table(hash_table* ht){
-
+	printf("ht_print_full_table\n");
+	printf("ht->maxsize = %d\n", ht->max_size);
 	for (int i = 0; i < ht->max_size; i++ ){ ht_print(i, ht); }
 }
 

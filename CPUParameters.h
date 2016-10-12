@@ -1,7 +1,13 @@
 #ifndef CPUPARAMETERS
 #define CPUPARAMETERS
 
+#define DEBUG 1
+#define DEBUG_BRANCHPRED 1
+
+#define TRACE_BUFFERSIZE 1024*1024
 #define HTMAXSIZE 32
+
+#define STEPLIMIT 2048
 
 #endif
 //EOF

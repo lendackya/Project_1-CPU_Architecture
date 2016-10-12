@@ -19,11 +19,12 @@ char* get_instruction_type(trace_item_t pipeline[]){
 
 // Predicts the Branch Instruction and takes the correct action
 void branch_pred(int prediction_method, trace_item_t pipeline[], hash_table* ht){
+	if (DEBUG_BRANCHPRED) printf("branch_pred() invoked with method = %d\n", prediction_method);
 	
-	
-	// Check if we have to branch
-	char* instn_type = get_instruction_type(pipeline); 
-	
+	if (pipeline[0].type != ti_BRANCH && pipeline[4].type != ti_BRANCH) {
+		return;
+	}
+		
 	// Predict 'Not Taken'
 	if (prediction_method == 0){
 		// we predict not taken, i.e. pipeline[4].pc = pipeline[3].pc + 4
@@ -33,10 +34,14 @@ void branch_pred(int prediction_method, trace_item_t pipeline[], hash_table* ht)
 	else if (prediction_method == 1){
 		// get bits 9-4 of instruction
 		u_int32_t bits = getBits9to4(pipeline[4].pc);
-	
+		if (DEBUG_BRANCHPRED) printf("grabbed bits from pipeline[4]: pc=0x%X, bits=0x%X\n", pipeline[4].pc, bits);
 		// convert bits to int, 0-63
 		bool pred_valid; 
 		// Prediction: Taken (1)
+		
+		// mod the bits to be 0-31
+		if (HTMAXSIZE == 32){ bits = bits % 32; }
+		
 		if (ht->was_taken[(int) bits] == 1){
 			
 			// Taken ---> Jump to the Target Address and start grabbing instructions from that address.
@@ -45,6 +50,7 @@ void branch_pred(int prediction_method, trace_item_t pipeline[], hash_table* ht)
 			// get the target address and set PC to it
 
 			// If prediction was correct --> Do nothing. We're already set up to handle this.
+			if (DEBUG_BRANCHPRED) printf("ht->was_taken[bits] = 1, bits=0x%X, pred_valid = %d\n", bits, pred_valid);
 		}
 		// Prediction: Not Taken (0)
 		else if (ht->was_taken[(int) bits] == 0){
@@ -55,13 +61,15 @@ void branch_pred(int prediction_method, trace_item_t pipeline[], hash_table* ht)
 			// Jump to the Target Address and flush the previous stages
 				
 			// If our prediction is correct.. 
-			// Do nothing, we're already set up to handle this. 	
+			// Do nothing, we're already set up to handle this.
+			if (DEBUG_BRANCHPRED) printf("ht->was_taken[bits] = 0, bits=0x%X, pred_valid = %d\n", bits, pred_valid); 	
 		}
 		// nothing is in that slot yet, i.e, hash_table[decimal].address == 0 && hash_table[decimal].was_taken == -1 
 		else if (ht_contains((int) bits, ht) == false){
 				
 			// we predict not taken
 			pred_valid = pipeline[4].pc == (pipeline[3].pc + 4);	
+			if (DEBUG_BRANCHPRED) printf("ht_contains(bits) = 0, bits=0x%X, pred_valid = %d\n", bits, pred_valid);
 		}
 			
 		if (pred_valid == false){
@@ -69,6 +77,7 @@ void branch_pred(int prediction_method, trace_item_t pipeline[], hash_table* ht)
 			// update the hash table
 			bool taken = (pipeline[4].pc != (pipeline[3].pc + 4));
 			ht_add((int) bits, pipeline[4].pc, taken, ht);
+			if (DEBUG_BRANCHPRED) printf("ht_add(bits=0x%x,pipeline[4].pc=0x%X,taken=%d, ht)\n", bits, pipeline[4].pc, taken);
 		}
 	}
 	else if (prediction_method == 2){
@@ -81,6 +90,8 @@ void branch_pred(int prediction_method, trace_item_t pipeline[], hash_table* ht)
 		//	13: taken x2
 		
 		u_int32_t bits = getBits9to4(pipeline[4].pc);
+		
+		if (HTMAXSIZE == 32){ bits = bits % 32; }
 		
 		bool predicting_taken;						//	current prediction
 		bool pred_valid;   							//	validity of current prediction

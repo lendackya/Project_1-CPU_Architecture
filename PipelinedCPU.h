@@ -7,9 +7,6 @@
 #ifndef PIPELINEDCPU
 #define PIPELINEDCPU
 
-#define TRACE_BUFFERSIZE 1024*1024
-#define STEPLIMIT 2048
-
 //	Types & Structures
 enum instruction_t {
 	ti_NOP = 0,

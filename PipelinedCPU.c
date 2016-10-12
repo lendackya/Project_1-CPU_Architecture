@@ -4,17 +4,15 @@
 //	by Max Garber <mbg21@pitt.edu> & Andrew Lendacky <anl119@pitt.edu>
 //
 
-#define DEBUG 0
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <string.h>
+#include "CPUParameters.h"
 #include "PipelinedCPU.h"
 #include "HashTable.h"
 #include "HazardControl.h"
-#include "CPUParameters.h"
 #include "branchPredictor.h"
 
 
@@ -36,6 +34,7 @@ unsigned int last_trace_item_pc;
 void sim_init(int argc, char *argv[]) {
 	step = 0;
 	branch_predicted_wrong = false;
+	init_hash_table(&ht);
 	
 	//	check for proper invocation
 	if(argc == 1) {
@@ -159,7 +158,7 @@ int main(int argc, char *argv[]) {
 		if (DEBUG) print_pipeline();
 		
 		//	run branch predictor
-		branch_pred(0, pipeline, &ht);
+		branch_pred(branch_prediction_method, pipeline, &ht);
 		
 		//	check for hazards - use prioritization
 		check_hazards(pipeline);
@@ -320,7 +319,7 @@ int main(int argc, char *argv[]) {
 		//	limit test runs for now
 		if(step >= STEPLIMIT) break;
 	}//end-while
-	
+	if (DEBUG) ht_print_full_table(&ht);
 	//	cleanup
 	sim_uninit();
 	return 0;
